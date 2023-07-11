@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'head.html' %}
+  <body>
+    <div class="header-wrapper">
+      <img
+        class="header-logo"
+        src="static/images/logo.png"
+        alt="Tripadvisor logo"
+      />
+      <img
+        class="header-image"
+        src="static/images/header.jpg"
+        alt="Tripadvisor logo"
+      />
+    </div>
+    <section>
+      <div class="intro">
+        <h1 class="main-headline">
+          Hey {% if name %}{{name}}{% else %}there{% endif %}! Let's plan your
+          next adventure
+        </h1>
+        <p>
+          Take a look at your weekly recommendation of must-see destinations.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.
+        </p>
+        <button class="button green">Start exploring</button>
+      </div>
+    </section>
+    {% block content %}{% endblock %}
+    <section class="green cta-section">
+      <h1>Feeling inspired?</h1>
+      <button class="button">See more places</button>
+    </section>
+    <section>
+      <h2 class="social-headline">Follow us for even more inspo</h2>
+      <div class="social-icon-wrapper">
+        <div>
+          <img
+            class="icon"
+            src="/static/images/instagram.png"
+            alt="instagram icon"
+          />
+        </div>
+        <div>
+          <img class="icon" src="/static/images/tiktok.png" alt="tiktok icon" />
+        </div>
+        <div>
+          <img
+            class="icon"
+            src="/static/images/twitter.png"
+            alt="twitter icon"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer>
+    Please do not reply directly to this email. This was sent from an address
+    that cannot accept responses. For questions or assistance, visit our Help
+    Center. Tripadvisor LLC, 400 1st Ave., Needham, MA 02494, USA © 2023
+    Tripadvisor LLC. All rights reserved. Tripadvisor, the Tripadvisor logo, the
+    owl logo, Travelers Choice and the Travelers Choice logo are trademarks of
+    Tripadvisor LLC in the US and other countries.
+  </footer>
+</html>

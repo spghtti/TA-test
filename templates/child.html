@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+<section>
+  <div>
+    <h1>Take your next adventure</h1>
+  </div>
+  <div class="recommendations">
+    {% for place in places %}
+    <div class="recommendation-wrapper">
+      <div class="recommendation-image">
+        <img src="static/images/{{ place.image }}" alt="{{ place.name }}" />
+      </div>
+      <div class="recommendation-info">
+        <h2 class="recommendation-headline">{{ place.name }}</h2>
+        <p class="recommendation-description">{{ place.description }}</p>
+        {{ index }}
+      </div>
+    </div>
+    {% endfor%}
+  </div>
+</section>
+{% endblock %}
